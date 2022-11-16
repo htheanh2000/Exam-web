@@ -1,0 +1,92 @@
+@import '../../styles/color.scss';
+
+.container {
+    width: 100%;
+    background-color: $--color-neutral-01;
+
+    .community {
+        display: flex;
+        justify-content: center;
+        padding-top: 128px;
+        position: relative;
+        margin: 0 40px;
+        img {
+            border-radius: 32px;
+        }
+
+        .content {
+            position: absolute;
+            left: 50%;
+            top: calc(96px + 128px);
+            transform: translateX(-50%);
+
+            h1,
+            p {
+                text-align: center;
+                color: $--color-neutral-01;
+            }
+
+            .socialWrapper {
+                display: flex;
+                justify-content: center;
+                margin-top: 42px;
+
+                .social {
+                    cursor: pointer;
+                    background-color: $--color-neutral-01;
+                    border-radius: 50%;
+                    margin: 0 12px;
+                    line-height: 0px;
+                    padding: 16px;
+                }
+            }
+        }
+
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid $--color-neutral-05;
+    }
+
+    .footer {
+        margin: 0px 40px;
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 48px;
+
+        &--link-wrapper {
+            display: flex;
+
+            .link {
+                cursor: pointer;
+                margin-right: 40px;
+                text-transform: capitalize;
+                color: $--color-neutral-05;
+            }
+        }
+    }
+
+    .footerSecond {
+        margin: 0px 40px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 24px;
+        p {
+            color: $--color-neutral-05;
+            cursor: pointer;
+        }
+
+        &--link-wrapper {
+            display: flex;
+
+            .link {
+                cursor: pointer;
+                margin-left: 32px;
+                text-transform: capitalize;
+                color: $--color-neutral-05;
+            }
+        }
+    }
+}

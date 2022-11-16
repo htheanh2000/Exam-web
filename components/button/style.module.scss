@@ -1,0 +1,67 @@
+@import '../../styles/color.scss';
+
+.button {
+    cursor: pointer;
+    border: 2px solid;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+
+    &:hover {
+        background-color: #22252D;
+        color: white;
+    }
+
+   
+
+    &--secondary {
+        span {
+            color: $--color-neutral-08;
+        }
+        border-color: #7F859630;
+
+        &:hover {
+            background-color: #22252D;
+
+            span {
+                color: #fff;
+            }
+        }
+        &__light-mode {
+            background-color: #fff;
+            color: #22252D;
+            &:hover {
+                background-color: #22252D;
+                span {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &--primary {
+        background-color: $--color-orange;
+        color: $--color-neutral-01;
+        border-color: $--color-neutral-01;
+
+        span {
+            color: #fff;
+        }
+
+        &:hover {
+            background-color: #2D73FF;
+        }
+    }
+
+    &--md {
+        height: 56px;
+        border-radius: 12px;
+        padding: 0px 32px;
+    }
+
+    &--sm {
+        height: 40px;
+        border-radius: 8px;
+        padding: 0px 14px;
+    }
+}

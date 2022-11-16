@@ -1,0 +1,158 @@
+
+@import "./styles/color.scss";
+@font-face {
+    font-family: 'Archivo';
+    src: url('../assets/font/archivo/Archivo-VariableFont_wdth\,wght.ttf') ;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/font/inter/Inter-VariableFont_slnt\,wght.ttf') ;
+}
+
+
+.hero {
+    font-family: 'Archivo';
+    font-weight: bolder;
+    font-size: 80px;
+    line-height: 88px;
+    letter-spacing: -3%;
+    color: $--color-neutral-08;
+    
+}
+
+
+
+.h1 {
+    font-family: 'Archivo';
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: -3%;
+    color: $--color-neutral-08;
+}
+
+h1 {
+    font-family: 'Archivo';
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: -3%;
+    color: $--color-neutral-08;
+}
+
+h2, .h2 {
+    font-family: 'Archivo';
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -2%;
+    color:$--color-neutral-08;
+}
+
+h3, .h3 {
+    font-family: 'Archivo';
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -2%;
+    color:$--color-neutral-08;
+}
+
+h4, .h4 {
+    font-family: 'Archivo';
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -2%;
+    color:$--color-neutral-08;
+}
+
+h5, .h5 {
+    font-family: 'Archivo';
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -2%;
+    color:$--color-neutral-08;
+}
+
+h6, .h6 {
+    font-family: 'Archivo';
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -2%;
+    color:$--color-neutral-08;
+}
+
+title, .title {
+    font-family: 'Archivo';
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -1%;
+    color:$--color-neutral-08;
+}
+
+body1, .body1 {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -2%;
+    color:$--color-neutral-08;
+}
+
+body2, .body2 {
+    font-family: 'Inter';
+    font-weight: bold ;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -2%;
+    color:$--color-neutral-08;
+}
+
+
+.base1 {
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color:$--color-neutral-08;
+    &--semibold {
+        font-weight: 600;
+    }
+}
+
+.base2 {
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color:$--color-neutral-08;
+    &--semibold {
+        font-weight: 600;
+    }
+}
+
+caption1, .caption1 {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -1%;
+    color:$--color-neutral-08;
+}
+
+
+caption2, .caption2 {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -1%;
+    color:$--color-neutral-08;
+}

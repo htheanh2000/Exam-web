@@ -1,0 +1,11 @@
+@import '../../styles/color.scss';
+
+.container {
+    background-color: $--color-neutral-01;
+    max-width: 100px;
+    position: sticky;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

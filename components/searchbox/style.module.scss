@@ -1,0 +1,23 @@
+@import "../../styles/color.scss";
+
+.searchWrapper {
+    display: flex;
+    width: fit-content;
+    background-color: #E7E7E160;
+    padding: 4px 0px 4px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    .input {
+        margin-left: 8px;
+        cursor: pointer;
+        background-color: #00000000;
+        color: $--color-neutral-06;
+        border-style: hidden;
+        outline: none;
+        min-width: 250px;
+        &::placeholder {
+            color: $--color-neutral-06;
+        }
+    }
+
+}

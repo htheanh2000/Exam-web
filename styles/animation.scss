@@ -1,0 +1,32 @@
+@keyframes easeAppear {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+
+}
+
+@keyframes easeAppear {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.easeAppear {
+    animation-name: easeAppear;
+    animation-duration: 0.2s;
+    animation-delay: 0s;
+}
+
+.easeDisappear {
+    animation-name: easeDisappear;
+    animation-duration: 0.2s;
+    animation-delay: 0s;
+}
