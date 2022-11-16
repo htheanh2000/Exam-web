@@ -17,9 +17,9 @@ const spanStyle = {
 }
 
 const button = (props: Props) => {
-    const { type = 'primary', className, size = 'md' , mode = 'light' } = props
+    const { type = 'primary', className, size = 'md' , mode = 'light' ,onClick} = props
     return (
-        <div className={cn(style.button, style[`button--${type}`], className, style[`button--${size}`])}>
+        <div onClick={onClick} className={cn(style.button, style[`button--${type}`], className, style[`button--${size}`])}>
             <span className={cn(spanStyle[size])} >{props.children}</span>
         </div>
     )

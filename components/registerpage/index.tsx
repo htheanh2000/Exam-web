@@ -4,7 +4,28 @@ import Image from "next/image"
 import heroImg from '../../assets/images/characters/image-1.png'
 import Button from "../button"
 import Link from "next/link"
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import {auth} from '../../firebase/clientApp'
 const RegisterPage = () => {
+    const register = () => {
+        const email = 'htheanh2000@gmail.com';
+        const password = 'theanh123';
+        console.log("createUserWithEmailAndPassword");
+        return
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                console.log("user", user);
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log("error", errorCode, errorMessage);
+                // 
+            });
+    }
     return (
         <div className="">
             <div className={style.wrapper}>
@@ -32,11 +53,10 @@ const RegisterPage = () => {
                         <label htmlFor="name">Nhập lại mật khẩu ?</label>
                         <input placeholder="Nhập lại mật khẩu" type="password" />
                     </div>
-
-                    <Button className={style.signinBtn}> Đăng kí</Button>
-                    <p>Đã có tài khoản ? 
+                    <Button className={style.signinBtn} onClick={register}> Đăng kí</Button>
+                    <p>Đã có tài khoản ?
                         <Link href={"/dang-nhap"}>
-                        <strong > Đăng nhập ngay</strong> 
+                            <strong > Đăng nhập ngay</strong>
                         </Link>
                     </p>
                 </div>
@@ -44,6 +64,7 @@ const RegisterPage = () => {
         </div>
     )
 }
+
 
 
 export default RegisterPage
