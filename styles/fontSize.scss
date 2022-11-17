@@ -21,7 +21,13 @@
     
 }
 
-
+.display-d2 {
+    font-family: 'Archivo';
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 88px;
+    letter-spacing: -3%;
+}
 
 .h1 {
     font-family: 'Archivo';
@@ -70,9 +76,9 @@ h4, .h4 {
 
 h5, .h5 {
     font-family: 'Archivo';
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 40px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
     letter-spacing: -2%;
     color:$--color-neutral-08;
 }
@@ -80,8 +86,8 @@ h5, .h5 {
 h6, .h6 {
     font-family: 'Archivo';
     font-weight: bold;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 24px;
     letter-spacing: -2%;
     color:$--color-neutral-08;
 }
@@ -98,8 +104,8 @@ title, .title {
 body1, .body1 {
     font-family: 'Inter';
     font-weight: 400;
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 14px;
+    line-height: 24px;
     letter-spacing: -2%;
     color:$--color-neutral-08;
 }
@@ -153,6 +159,15 @@ caption2, .caption2 {
     font-weight: 700;
     font-size: 12px;
     line-height: 16px;
+    letter-spacing: -1%;
+    color:$--color-neutral-08;
+}
+
+.menu14 {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
     letter-spacing: -1%;
     color:$--color-neutral-08;
 }

@@ -1,0 +1,51 @@
+
+@import '../../styles/color.scss';
+
+.container {
+    display: flex;
+    flex: row;
+    .mainpage {
+        padding-left: 64px;
+        padding-top: 48px;
+        background-color: #fff;
+        width: 100%;
+        h6 {
+            padding-bottom: 16px;
+        }
+        .card {
+            margin-top: 40px;
+            border-radius: 24px;
+            width: 628px;
+            height: 331px;
+            background-color: $--color-primary;
+            color: #fff;
+            h5 {
+                color: #fff;
+                margin-bottom: 16px;
+            }
+            p {
+                max-width: 200px;
+                color: #fff;
+            }
+            .mark {
+                width: 160px;
+                text-align: center;
+            }
+            padding-top: 24px;
+            padding-left: 24px;
+            .btn {
+                margin-top: 16px;
+                background-color: #fff ;
+                &:hover {
+                    background-color: $--color-primary;;
+                    span {
+                        color: #fff;
+                    }
+                }
+                span {
+                    color: #000;
+                }
+            }
+        }
+    }
+}

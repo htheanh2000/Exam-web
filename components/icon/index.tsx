@@ -7,8 +7,15 @@ import twitter from '../../assets/icons/twitter.svg'
 import instagram from '../../assets/icons/instagram.svg'
 import telegram from '../../assets/icons/telegram.svg'
 import facebook from '../../assets/icons/facebook.svg'
+import activity from '../../assets/icons/activity.svg'
+import bag from '../../assets/icons/bag.svg'
+import chart from '../../assets/icons/chart.svg'
+import discovery from '../../assets/icons/discovery.svg'
+import setting from '../../assets/icons/setting.svg'
+import wallet from '../../assets/icons/wallet.svg'
+import document from '../../assets/icons/document.svg'
+
 import styles from "./style.module.scss"
-import { type } from 'os'
 
 
 type Props = {
@@ -26,7 +33,14 @@ const icons = {
     twitter: twitter,
     telegram: telegram,
     facebook: facebook,
-    instagram: instagram
+    instagram: instagram,
+    activity: activity,
+    bag: bag,
+    chart: chart,
+    discovery: discovery,
+    setting: setting,
+    wallet: wallet,
+    document: document,
 }
 
 const IconSize = {

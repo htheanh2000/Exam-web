@@ -7,8 +7,13 @@ type Props = {
     type?: 'primary' | 'secondary';
     className?: string;
     size?: 'sm' | 'md' ;
-    mode?: 'light' | 'dark'; 
+    mode?: 'light' | 'dark';
+    bg?: string;
+    bgHover?: string;
+    color?: string;
+    colorHover?: string; 
     onClick?: () => void;
+    customStyle?: string;
 };
 
 const spanStyle = {
@@ -16,8 +21,10 @@ const spanStyle = {
     'md' : 'base1',
 }
 
+
+
 const button = (props: Props) => {
-    const { type = 'primary', className, size = 'md' , mode = 'light' ,onClick} = props
+    const { type = 'primary', className, size = 'md',onClick , customStyle} = props
     return (
         <div onClick={onClick} className={cn(style.button, style[`button--${type}`], className, style[`button--${size}`])}>
             <span className={cn(spanStyle[size])} >{props.children}</span>

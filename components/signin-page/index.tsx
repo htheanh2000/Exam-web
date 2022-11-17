@@ -7,13 +7,17 @@ import Link from "next/link"
 import { useRouter } from 'next/router'
 import { auth } from '../../firebase/clientApp'
 import { signInWithEmailAndPassword } from "firebase/auth"
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 const SignInPage = () => {
     const router = useRouter()
     const [err, setErr] = useState('')
     const emailRef = useRef<HTMLInputElement>(null)
     const passwordRef = useRef<HTMLInputElement>(null)
+
+    useEffect(() => {
+        console.log('auth',auth.currentUser);
+    },[])
     const signin = () => {
         setErr('')
         const email = emailRef.current?.value || ''

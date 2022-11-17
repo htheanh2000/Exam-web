@@ -2,10 +2,51 @@
 
 .container {
     background-color: $--color-neutral-01;
-    max-width: 100px;
+    max-width: 256px;
     position: sticky;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+
+    .logo {
+        margin-top: 16px;
+        margin-bottom: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .caption {
+        color: $--color-text-light;
+        margin-bottom: 16px;
+    }
+
+    .admin {
+        padding: 0 16px;
+        .tab {
+            border-radius: 12px;
+            height: 56px;
+            width: 216px;
+            padding: 0 20px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+             &:hover {
+                .icon {
+                     filter: brightness(0) invert(1)
+                }
+                background-color: $--color-primary;
+                color: $--color-text-white;
+            }
+            
+            p {
+                margin-left: 16px;
+            }
+        }
+        .selected  {
+            background-color: $--color-primary;
+            color: $--color-text-white;
+        }
+    }
 }
