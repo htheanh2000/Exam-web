@@ -1,49 +1,144 @@
-
 @import '../../styles/color.scss';
 
 .container {
     display: flex;
     flex: row;
+
     .mainpage {
-        padding-left: 64px;
+        padding: 0 64px;
         padding-top: 48px;
         background-color: #fff;
         width: 100%;
+
         h6 {
             padding-bottom: 16px;
         }
+        .flexRow {
+            margin: 24px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
         .card {
-            margin-top: 40px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            position: relative;
             border-radius: 24px;
             width: 628px;
             height: 331px;
             background-color: $--color-primary;
             color: #fff;
+
             h5 {
                 color: #fff;
                 margin-bottom: 16px;
             }
+
             p {
                 max-width: 200px;
                 color: #fff;
             }
+
             .mark {
                 width: 160px;
                 text-align: center;
             }
+
             padding-top: 24px;
             padding-left: 24px;
+
             .btn {
                 margin-top: 16px;
-                background-color: #fff ;
+                background-color: #fff;
                 &:hover {
-                    background-color: $--color-primary;;
+                    background-color: $--color-primary;
                     span {
                         color: #fff;
                     }
                 }
                 span {
                     color: #000;
+                }
+            }
+
+            .bgImg {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 64px;
+            }
+        }
+
+        .suggestion {
+            margin-bottom: 32px;
+            border-radius: 24px;
+            width: 300px;
+            padding: 32px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            .exam {
+                padding: 4px 0;
+                border-radius: 8px;
+                &:hover {
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                }
+                display: flex;
+                align-items: center;
+                width: 100%;
+                cursor: pointer;
+                position: relative;
+                margin-bottom: 16px;
+                .img {
+                    margin-right: 16px;
+                    border-radius: 16px;
+                }
+
+                .name {
+                    color: #808191
+                }
+
+                .icon {
+                    position: absolute;
+                    right: 0
+                }
+            }
+
+        }
+
+        .searchBox {
+            position: absolute;
+            top: 64px;
+            right: 032px
+        }
+
+        .yourStar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 24px;
+            width: 300px;
+            padding: 32px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            height: 331px;
+            .star {
+                color: $--color-primary;
+            }
+            .caption {
+                margin-top: 24px;
+                margin-bottom: 8px;
+                text-align: center;
+                max-width: 150px;
+                color: #808191;
+            }
+            .btn {
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                background-color: #fff;
+                &:hover {
+                    background-color: $--color-primary;
+                    span {
+                        color: #fff;
+                    }
+                }
+                span {
+                    color: #5F75EE;
                 }
             }
         }

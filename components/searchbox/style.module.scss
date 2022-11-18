@@ -3,10 +3,10 @@
 .searchWrapper {
     display: flex;
     width: fit-content;
-    background-color: #E7E7E160;
     padding: 4px 0px 4px 12px;
     border-radius: 12px;
     cursor: pointer;
+    align-items: flex-start;
     .input {
         margin-left: 8px;
         cursor: pointer;
@@ -18,6 +18,11 @@
         &::placeholder {
             color: $--color-neutral-06;
         }
+    }
+    .noti {
+        position: absolute;
+        right: 0;
+        top: -20px;
     }
 
 }

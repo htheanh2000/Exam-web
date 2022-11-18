@@ -14,6 +14,7 @@ import discovery from '../../assets/icons/discovery.svg'
 import setting from '../../assets/icons/setting.svg'
 import wallet from '../../assets/icons/wallet.svg'
 import document from '../../assets/icons/document.svg'
+import right from '../../assets/icons/right.svg'
 
 import styles from "./style.module.scss"
 
@@ -41,6 +42,7 @@ const icons = {
     setting: setting,
     wallet: wallet,
     document: document,
+    right: right
 }
 
 const IconSize = {

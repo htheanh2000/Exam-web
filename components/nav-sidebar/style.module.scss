@@ -4,7 +4,8 @@
     background-color: $--color-neutral-01;
     max-width: 256px;
     position: sticky;
-    height: 100vh;
+    top: 0;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 
