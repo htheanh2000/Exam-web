@@ -9,22 +9,22 @@ type AdminTools = {
 const adminTools :AdminTools[] = [
     {
         name: 'Tổng quan',
-        url: 'tong-quan',
+        url: '/tong-quan',
         icon: 'activity'
     },
     {
         name: 'Đề thi',
-        url: 'de-thi',
+        url: '/de-thi',
         icon: 'bag'
     },
     {
         name: 'Lộ trình học',
-        url: 'lo-trinh-hoc',
+        url: '/lo-trinh-hoc',
         icon: 'document'
     },
     {
         name: 'cài đặt',
-        url: 'cai-dat',
+        url: '/cai-dat',
         icon: 'setting'
     },
 ]
