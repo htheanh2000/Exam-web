@@ -1,17 +1,21 @@
 @import '../../styles/color.scss';
+
 .container {
     display: flex;
     flex: row;
+
     .mainpage {
         padding: 0 64px;
         padding-top: 48px;
         background-color: #fff;
         width: 100%;
+
         .searchBox {
             position: absolute;
             top: 64px;
             right: 032px
         }
+
         .banner {
             position: relative;
             overflow: hidden;
@@ -22,17 +26,66 @@
             margin-top: 32px;
             display: flex;
             align-items: center;
+
             .content {
                 margin-left: 64px;
                 align-items: center;
             }
-            h3, p {
+
+            h3,
+            p {
                 color: #fff;
             }
+
             .bgImg {
                 position: absolute;
                 right: 32px;
-                top:32px;
+                top: 32px;
+            }
+        }
+
+        .examList {
+            border-radius: 24px;
+            padding: 8px 32px;
+            margin-top: 32px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+        .table {
+            .header {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 40px;
+                margin-top: 32px;
+                border-bottom: 1px solid #eee;
+
+                p {
+                    color: #B2B3BD;
+                    font-weight: 500;
+                }
+            }
+
+            .rowWrapper {
+                margin-top: 16px;
+                .row {
+                    margin-bottom: 24px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    cursor: pointer;
+                    border-radius: 8px;
+                    padding: 8px 4px;
+                    &:hover {
+                        background-color: #dcdcdc80 ;
+                    }
+                    .title {
+                        display: flex;
+                        align-items: center;
+                        .content {
+                            margin-left: 24px;
+                        }
+                    }
+                }
             }
         }
     }

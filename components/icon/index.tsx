@@ -15,6 +15,7 @@ import setting from '../../assets/icons/setting.svg'
 import wallet from '../../assets/icons/wallet.svg'
 import document from '../../assets/icons/document.svg'
 import right from '../../assets/icons/right.svg'
+import down from '../../assets/icons/down.svg'
 
 import styles from "./style.module.scss"
 
@@ -42,10 +43,12 @@ const icons = {
     setting: setting,
     wallet: wallet,
     document: document,
-    right: right
+    right: right,
+    down: down
 }
 
 const IconSize = {
+    'sx': 12,
     'sm': 24,
     'md': 32,
     'lg': 40

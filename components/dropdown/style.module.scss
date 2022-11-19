@@ -1,0 +1,39 @@
+.dropdown {
+    background-color: #E4E4E4;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 256px;
+    .header {
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    p {
+        color: #808191;
+    }
+
+    .content {
+        position: absolute;
+        width: 256px;
+        z-index: 100;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border-radius: 12px;
+        overflow: hidden;
+
+        .item {
+
+            padding: 16px;
+            background-color: white;
+            cursor: pointer;
+
+            &:first-child {
+            }
+
+            &:hover {
+                background-color: #E4E4E4;
+            }
+        }
+    }
+
+}
