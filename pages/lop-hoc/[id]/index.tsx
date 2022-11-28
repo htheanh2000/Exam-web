@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
-import ExamGatewayPage from '../../components/exam-gateway-page'
+import ClassPage from '../../../components/class-page'
 const Page: NextPage = () => {
     return (
         <div>
-            <ExamGatewayPage/>
+            <ClassPage/>
         </div>
     )
 }

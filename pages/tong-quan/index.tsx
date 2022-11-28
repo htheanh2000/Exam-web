@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
-import OverViewPage from '../../components/overview-page'
-const OverView: NextPage = () => {
+import ExamGatewayPage from '../../components/exam-gateway-page'
+const Page: NextPage = () => {
     return (
         <div>
-            <OverViewPage/>
+            <ExamGatewayPage/>
         </div>
     )
 }
 
-export default OverView
+export default Page
