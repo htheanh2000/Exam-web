@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\components\\exam-gateway-page",
+    "\\components\\registerpage",
+    "\\components\\student-page",
+    "\\pages",
+    "\\pages\\dang-ki",
+    "\\pages\\de-thi",
+    "\\pages\\quet-dang-ki",
+    "\\public",
+    "\\styles"
+  ],
+  "SelectedNode": "\\pages\\dang-ki\\index.tsx",
+  "PreviewInSolutionExplorer": false
+}

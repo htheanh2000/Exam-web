@@ -26,6 +26,15 @@ const RegisterPage = () => {
                 // 
             });
     }
+
+    const showRegistrationForm = () => {
+        const registrationOptions = document.getElementById("registration_options");
+        if (registrationOptions != null) registrationOptions.style.display = "none";
+
+        const registrationForm = document.getElementById("registration_form");
+        if (registrationForm != null) registrationForm.style.display = "block";
+    }
+
     return (
         <div className="">
             <div className={style.wrapper}>
@@ -36,29 +45,38 @@ const RegisterPage = () => {
                     </div>
                 </div>
                 <div className={style.rightside}>
-                    <h2>Tạo tài khoản</h2>
-                    <div className={style.row}>
-                        <label htmlFor="name">Tên của bạn là gì ?</label>
-                        <input placeholder="Nhập tên của bạn" type="text" />
+                    <div id="registration_options">
+                        <h2>Chọn hình thức đăng ký</h2>
+                        <Button className={style.signinBtn}>Quét thẻ</Button>
+                        <Button className={style.signinBtn} onClick={showRegistrationForm}>Điền tay</Button>
                     </div>
-                    <div className={style.row}>
-                        <label htmlFor="name">Email hoặc số điện thoại của bạn là ?</label>
-                        <input placeholder="Nhập email hoặc số điện thoại của bạn" type="text" />
+                    <div id="registration_form" style={{ display: "none" }}>
+                        <h3>Tạo tài khoản</h3>
+                        <div className={style.row}>
+                            <label htmlFor="name">Tên của bạn là gì ?</label>
+                            <input placeholder="Nhập tên của bạn" type="text" />
+                        </div>
+                        <div className={style.row}>
+                            <label htmlFor="name">Email hoặc số điện thoại của bạn là ?</label>
+                            <input placeholder="Nhập email hoặc số điện thoại của bạn" type="text" />
+                        </div>
+                        <div className={style.row}>
+                            <label htmlFor="name">Nhập mật khẩu ?</label>
+                            <input placeholder="Nhập mật khẩu" type="password" />
+                        </div>
+                        <div className={style.row}>
+                            <label htmlFor="name">Nhập lại mật khẩu ?</label>
+                            <input placeholder="Nhập lại mật khẩu" type="password" />
+                        </div>
+
+                        <Link href={"/dang-nhap"}>Tôi đổi ý rồi. Tôi muốn quét thẻ tự động đăng ký.</Link>
+                        <Button className={style.signinBtn} onClick={register}> Đăng kí</Button>
+                        <p>Đã có tài khoản ?
+                            <Link href={"/dang-nhap"}>
+                                <strong > Đăng nhập ngay</strong>
+                            </Link>
+                        </p>
                     </div>
-                    <div className={style.row}>
-                        <label htmlFor="name">Nhập mật khẩu ?</label>
-                        <input placeholder="Nhập mật khẩu" type="password" />
-                    </div>
-                    <div className={style.row}>
-                        <label htmlFor="name">Nhập lại mật khẩu ?</label>
-                        <input placeholder="Nhập lại mật khẩu" type="password" />
-                    </div>
-                    <Button className={style.signinBtn} onClick={register}> Đăng kí</Button>
-                    <p>Đã có tài khoản ?
-                        <Link href={"/dang-nhap"}>
-                            <strong > Đăng nhập ngay</strong>
-                        </Link>
-                    </p>
                 </div>
             </div>
         </div>
