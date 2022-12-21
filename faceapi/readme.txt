@@ -1,0 +1,2 @@
+this won't work if you just open the html file in chrome, you need to run it via a server or some hosting backend so it loads the scripts and models in
+easiest way to test this out is to just use the live server extension on vscode
