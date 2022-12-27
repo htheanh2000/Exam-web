@@ -53,19 +53,18 @@ video.addEventListener('play', () => {
 
         const faceMatcher = new faceapi.FaceMatcher(imageDescriptor)
         const bestMatch = faceMatcher.findBestMatch(webcamDescriptor.descriptor)
-        console.log(bestMatch.toString())
 
-        /* if (webcamDescriptor && imageDescriptor) {
-          const distance = faceapi.euclideanDistance(webcamDescriptor, imageDescriptor)
+        if (bestMatch) {
+          const distance = bestMatch.distance
           console.log(distance)
           if (distance <= 0.5) {
-            textMatch.style.visiblity = true
-            textMismatch.style.visibility = false
+            textMatch.style.visibility = 'visible'
+            textMismatch.style.visibility = 'hidden'
           } else {
-            textMatch.style.visiblity = false
-            textMismatch.style.visibility = true
+            textMatch.style.visibility = 'hidden'
+            textMismatch.style.visibility = 'visible'
           }
-        } */
+        } 
       }
     }, 1000)
   })
@@ -74,8 +73,8 @@ video.addEventListener('play', () => {
     if (image) image.remove()
     if (canvas) canvas.remove()
     image = await faceapi.bufferToImage(imageUpload.files[0])
-    image.width = 720
-    image.height = 560
+    image.width = video.width
+    image.height = video.height
     document.getElementById('imageContainer').append(image)
     canvas = faceapi.createCanvasFromMedia(image)
     document.getElementById('imageContainer').append(canvas)

@@ -25,16 +25,18 @@
             left: 0;
         }
         .camCanvas {
-            position: absolute;
             top: 0;
-            left: 27.5%;
+            left: 50%;
         }
         .flex-container {
             display: flex;
+            width: 100%;
         }
 
         .flex-child {
             flex: 1;
+            align-items: center;
+            margin: 0px auto;
             border: 2px solid black;
         }  
     </style>
@@ -49,8 +51,8 @@
         </div>
     </div>
     <div>
-        <p style="color:green; visibility: hidden;" id="textMatch">MATCHING DATA</p>
-        <p style="color:red; visibility: hidden;" id="textMismatch">DISCREPANCY DETECTED</p>
+        <p style="color:green; visibility: hidden;" id='textMatch'>MATCHING DATA</p>
+        <p style="color:red; visibility: hidden;" id='textMismatch'>DISCREPANCY DETECTED</p>
     </div>
 </body>
 </html>

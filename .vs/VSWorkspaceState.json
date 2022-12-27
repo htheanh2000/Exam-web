@@ -1,16 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\components\\exam-gateway-page",
-    "\\components\\registerpage",
-    "\\components\\student-page",
-    "\\pages",
+    "\\faceapi",
     "\\pages\\dang-ki",
     "\\pages\\de-thi",
     "\\pages\\quet-dang-ki",
-    "\\public",
     "\\styles"
   ],
-  "SelectedNode": "\\pages\\dang-ki\\index.tsx",
+  "SelectedNode": "\\faceapi\\index.html",
   "PreviewInSolutionExplorer": false
 }
