@@ -17,6 +17,8 @@ const ClassPage = () => {
     const [classes, setClasses] = useState<DocumentData[]>([])
     const route = useRouter()
     const user = auth.currentUser
+    console.log("user", user);
+    
     useEffect(() => {
         getClasses()
     }, [])
@@ -59,6 +61,7 @@ const ClassPage = () => {
                 <div className={style.header}>
                     <div>
                         <h6>Hi {user?.displayName}</h6>
+                        <a className="text-blue-500" target="_blank" href={"http://localhost:3001/?uuid=" + '' + user?.uid}>Click to verify your account</a>
                         <h2>Danh sách lớp học 🎉</h2>
                     </div>
                     <div className={style.searchBox}>

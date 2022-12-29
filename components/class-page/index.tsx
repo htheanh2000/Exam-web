@@ -70,7 +70,15 @@ const ExamGatewayPage = () => {
     const diemdanh = (index: any) => {
         console.log("index", index);
         const arr = [...students]
-        arr[index].diemdanh[today] = !arr[index].diemdanh[today]
+        console.log("arr[index].diemdanh", arr[index].diemdanh);
+        if(!arr[index].diemdanh) {
+            arr[index].diemdanh = {
+                [today]: true
+            }
+        }
+        else {
+            arr[index].diemdanh[today] = !arr[index].diemdanh[today]
+        }
         console.log(arr[0]);
         setStudents([...arr])
         setDoc(doc(db, `class/${router.query.id}/students`, arr[index].id), arr[index]);
