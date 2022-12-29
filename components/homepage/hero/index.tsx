@@ -12,21 +12,21 @@ const HERO_INFO = [
     {
         img: img1,
         backgroundColor: '#30B28C',
-        title: 'Total sales',
-        number: '16,789',
+        title: 'Khách hàng',
+        number: '57',
         sub: ''
     },
     {
         img: img2,
         backgroundColor: '#9F73E6',
-        title: 'Total volumes',
-        number: '300.89',
+        title: 'Tỉ lệ thành công',
+        number: '98,72%',
         sub: '$833,722'
     },
     {
         img: img3,
         backgroundColor: '#FDC24F',
-        title: 'Character sold',
+        title: 'Số gương mặt đã nhận diện',
         number: '8,321',
         sub: ''
     }
@@ -37,8 +37,8 @@ const Hero = () => {
         <div className={style.container}>
             <div className={style.heroWrapper}>
                 <div className={style.wrapper}>
-                    <h1 className={style.title}> <span>2,048</span> legendary <br /> ready to join <br /> the clash.</h1>
-                    <h6>Play-to-Earn NFT Marketplace</h6>
+                    <h1 className={style.title}> <span>99%</span> Tỉ lệ <br /> Chính xác khi <br /> nhận diện.</h1>
+                    <h6>Ứng dụng điểm danh bằng khuôn mặt</h6>
                     <Link href="/dang-ki" >
                         <a>
                             <Button className={style.button}>Đăng kí ngay</Button>

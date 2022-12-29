@@ -1,27 +1,26 @@
-import NavSideBar from "../nav-sidebar"
 import Avatar from '../../assets/images/avatar.png'
 import Image from 'next/image'
 import Button from "../button"
-import { FormEvent, useEffect, useRef, useState } from "react"
-import { collection, doc, DocumentData, getDocs, setDoc } from "firebase/firestore"
+import { FormEvent, useRef, useState } from "react"
+import { doc, setDoc } from "firebase/firestore"
 import { db } from "../../firebase/clientApp"
 import router from "next/router"
+import { getStorage, ref, uploadBytes } from "firebase/storage";
 
 const SettingPage = () => {
     const fileRef = useRef<HTMLInputElement>(null)
     const [avatar, setAvatar] = useState<any>()
     const nameRef = useRef<HTMLInputElement>(null)
     const idRef = useRef<HTMLInputElement>(null)
-    
+    const storage = getStorage();
+
     const formdata = [
         {
             label: 'Tên sinh viên',
-            value: 'Huỳnh Thế Anh',
             ref: nameRef
         },
         {
             label: 'MSSV',
-            value: '18520448',
             ref: idRef
         }
     ]
@@ -33,18 +32,29 @@ const SettingPage = () => {
         const files = fileRef.current?.files;
 
         if (files) {
+            console.log("files[0]", files[0]);
             setAvatar(URL.createObjectURL(files[0]))
 
         }
     }
 
     const createSudent = async () => {
-        const name = nameRef.current?.value 
-        const id = idRef.current?.value 
-        if(!name || !id) return
+        const files = fileRef.current?.files;
+        if (!files?.length) return
+        const file = files[0]
+        const random = Math.round(Math.random() * 1000000000)
+        const filename = random.toString()
+        const storageRef = ref(storage, filename);
+        uploadBytes(storageRef, file).then((snapshot) => {
+            console.log('Uploaded a blob or file!', snapshot);
+        });
+
+        const name = nameRef.current?.value
+        const id = idRef.current?.value
+        if (!name || !id) return
         await setDoc(doc(db, `class/${router.query.id}/students`, id), {
-            name,id
-          });
+            name, id, url: filename
+        });
         router.push('/lop-hoc/' + router.query.id)
     }
 

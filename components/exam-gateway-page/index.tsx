@@ -6,8 +6,8 @@ import ISubject from '../../assets/images/subject.png'
 import Router, { useRouter } from "next/router"
 import Link from "next/link"
 import { useEffect, useState } from "react"
-import { collection, DocumentData, getDocs } from "firebase/firestore"
-import { db } from "../../firebase/clientApp"
+import { collection, DocumentData, getDoc, getDocs, doc, getCountFromServer } from "firebase/firestore"
+import { auth, db } from "../../firebase/clientApp"
 import Button from "../button"
 
 const tableTitles = ['Tên lớp học', 'Mã lớp học', 'Số sinh viên']
@@ -16,6 +16,7 @@ const widthConfig = [40, 30, 30]
 const ClassPage = () => {
     const [classes, setClasses] = useState<DocumentData[]>([])
     const route = useRouter()
+    const user = auth.currentUser
     useEffect(() => {
         getClasses()
     }, [])
@@ -24,15 +25,31 @@ const ClassPage = () => {
         console.log("get classes");
         const querySnapshot = await getDocs(collection(db, "class"));
         let arr: DocumentData[] = []
-        querySnapshot.forEach((doc) => {
-               const data = {
+        querySnapshot.forEach(async (doc) => {
+            const data = {
                 id: doc.id,
-                data: doc.data()
-               }
+                data: doc.data(),
+            }
+            console.log("data", data);
             arr.push(data)
         });
-        console.log(arr);
-        setClasses(arr)
+        
+        let result = []
+
+        for (let index = 0; index < arr.length; index++) {
+            const element = arr[index];
+            const querySnapshot = await getCountFromServer(collection(db, "class", `${element.id}/students`));
+            result.push({
+                ...element,
+                data: {
+                    ...element.data,
+                    students: querySnapshot.data().count
+                }
+            })
+        }
+
+        console.log("result", result);
+        setClasses(result)
 
     }
 
@@ -41,7 +58,7 @@ const ClassPage = () => {
             <div className={style.mainpage}>
                 <div className={style.header}>
                     <div>
-                        <h6>Hi The Anh</h6>
+                        <h6>Hi {user?.displayName}</h6>
                         <h2>Danh sách lớp học 🎉</h2>
                     </div>
                     <div className={style.searchBox}>

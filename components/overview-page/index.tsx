@@ -9,6 +9,7 @@ import math from '../../assets/images/subjects/math.png'
 import chemistry from '../../assets/images/subjects/chemistry.png'
 import Icon from "../icon";
 import SearchBox from "../searchbox";
+import { auth } from "../../firebase/clientApp";
 const suggestionList = [
     {
         subject: 'Vật lý',
@@ -31,12 +32,13 @@ const suggestionList = [
 ]
 
 const OverviewPage = () => {
+    const user = auth.currentUser
     return (
         <div className={style.container}>
             <NavSideBar />
             <div className={style.mainpage}>
                 <div>
-                    <h6>Hi The Anh</h6>
+                    <h6>Hi {user?.displayName}</h6>
                     <h2>Tổng Quan 👋</h2>
                 </div>
                 <div className={style.flexRow}>
